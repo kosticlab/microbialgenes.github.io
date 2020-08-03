@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-57022462-9"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-57022462-9");
+  </script>
+
+  <title>Universe of Microbial Genes</title>
+
+  <!-- Bootstrap core CSS -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,900"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    rel="icon"
+    href="{{ url_for('static', filename='img/hms-logo.png') }}"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ url_for('static', filename='css/bootstrap.techie.min.css') }}"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',
+    filename='css/component.css') }}"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',
+    filename='css/main.css') }}"
+  />
+</head>
+
+<body>
+  <nav
+    class="navbar navbar-default"
+    role="navigation"
+    style="margin-top:20px;
+    margin-bottom:30px;"
+  >
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle"
+        data-toggle="collapse"
+        data-target=".navbar-ex1-collapse"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <h3 style="margin-top:0; font-weight: 300">
+          The Universe of <strong>Microbial Genes</strong>
+        </h3>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="/">About</a></li>
+        <li><a href="/search">Find Genes</a></li>
+        <li><a href="/data">Data & Tools</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top:3rem;">
+    <div class="row">
+      <div class="jumbotron">
+        <p>
+          We study the heterogeneity of microbial genetics, with a particular
+          emphasis on how microbes and their genes influence their environment,
+          and through that, human health. With this resource, our goal is to
+          expand the current understanding of variation and function in
+          microbial sequence diversity around the world. Scroll down to see how
+          we went about building out this database, as well as some of our key
+          observations about microbial genetic diversity.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container">
+    <div class="row">
+      <br><br>
+      <div class="col-xs-12" style="text-align:center;">
+        <p>We study the heterogeneity of microbial genetics, with a particular
+          emphasis on how microbes and their genes influence their environment,
+          and through that, human health. With this resource, our goal is to
+          expand the current understanding of variation and function in
+          microbial sequence diversity around the world. Scroll down to see how
+          we went about building out this database, as well as some of our key
+          observations about microbial genetic diversity.
+        </p>
+      </div>
+    </div>
+  </div> -->
+  <div id="cbp-so-scroller" class="cbp-so-scroller">
+    <section class="cbp-so-section">
+      <article class="cbp-so-side cbp-so-side-left">
+        <h2>De novo assembly and gene identification</h2>
+        <p>
+          We started with building a “de novo assembly” pipeline. Assembly
+          involves taking raw shotgun sequence data – short sequences of DNA –
+          that were generated from, in this case, the aggregation of all
+          microbial DNA in a given environment (i.e. human stool or saliva).
+          Akin to putting together a giant puzzle, de novo assembly finds
+          overlaps in and groups these sequences into long, contiguous stretches
+          of DNA (contigs).
+        </p>
+
+        <p>
+          We can then algorithmically identify Open-Reading-Frames (probable
+          microbial genes) on the contigs, afterwards finding the
+          “non-redundant” set genes in our dataset by sequence-based clustering
+          (i.e. calling two genes identical if they are more than 95%
+          identical). As noted here, we were particularly interested in the
+          overall rarity of genes – that is to say, how often they occurred in
+          different samples. We refer to genes that appear once as “singletons,”
+          and their counterparts as “non-singletons.”
+        </p>
+      </article>
+      <figure class="cbp-so-side cbp-so-side-right">
+        <img
+          src="{{ url_for('static', filename='img/process_overview.jpg') }}"
+          alt="img01"
+          style="width:100%;"
+        />
+      </figure>
+    </section>
+    <section class="cbp-so-section">
+      <figure class="cbp-so-side cbp-so-side-left">
+        <img
+          src="{{ url_for('static', filename='img/db_overview.png') }}"
+          alt="img02"
+          style="width:100%;"
+        />
+      </figure>
+      <article class="cbp-so-side cbp-so-side-right">
+        <h2>Our database</h2>
+        <p>
+          Using our pipeline, we were able to identify a total of 157,241,550
+          ORFs from our assembled oral microbiome data, compared to 136,672,846
+          from our gut microbiome data. Clustering at the 95% identity
+          threshold, our initial oral and gut catalogs contained 23,961,508 and
+          22,254,436 consensus genes, respectively. When our oral and gut
+          catalogs were clustered together at 95% identity, the resultant
+          catalog had 45,666,334 genes.
+        </p>
+
+        <p>
+          To make searching this data a simple process, we built this resource,
+          which is outlined in the figure on the left. We constructed a
+          PostgreSQL database housing our gene sequence information with
+          metadata regarding predicted gene taxonomic annotation, gene function,
+          gene cluster size (i.e. singleton status), gene length, and origin
+          body site.
+        </p>
+      </article>
+    </section>
+    <section class="cbp-so-section">
+      <article class="cbp-so-side cbp-so-side-left">
+        <h2>Gene cluster sizes,<br />95% identity</h2>
+        <p>
+          We found this result from our gene frequency analysis particularly
+          striking – when we defined a unique gene at the 95% identity level
+          (again greater than 95% distinct from all other genes in our dataset),
+          we found that nearly half of the Open-Reading-Frames we found were
+          singletons, occurring in only 1 sample. In this plot, the singletons
+          in both the oral and gut microbiome can be seen in the peak on the far
+          left of the plot.
+        </p>
+      </article>
+      <figure class="cbp-so-side cbp-so-side-right">
+        <img
+          src="{{ url_for('static', filename='img/combined_clusters_95.jpg')
+          }}"
+          alt="img03"
+          style="width:100%;"
+        />
+      </figure>
+    </section>
+    <section class="cbp-so-section">
+      <figure class="cbp-so-side cbp-so-side-left">
+        <img
+          src="{{ url_for('static', filename='img/iterative_clustering.jpg')
+          }}"
+          alt="img04"
+          style="width:100%;"
+        />
+      </figure>
+      <article class="cbp-so-side cbp-so-side-right">
+        <h2>Singletons at different percent identities</h2>
+        <p>
+          The first thing we did was to validate that singletons were not
+          artifacts of our percent identity cutoff. We were concerned that by
+          defining a gene as being 95% distinct from all other genes, we were
+          being too conservative – perhaps the optimal cutoff was 90%, or even
+          lower. If that were the case, then maybe all the singletons would
+          cluster with other genes once we dropped below a certain point. With
+          that in mind, we progressively relaxed our threshold, iteratively
+          clustering our gene catalog until we hit 50% identity. To our
+          surprise, the ratio of singletons to non-singletons stayed about the
+          same regardless of gene identity cutoff.
+        </p>
+      </article>
+    </section>
+    <section class="cbp-so-section">
+      <article class="cbp-so-side cbp-so-side-left">
+        <h2>Gene cluster sizes,<br />50% identity</h2>
+        <p>
+          Here we can see that, while the shape of the distributions changed
+          slightly from 95%, our gene catalogs in the oral and gut are still
+          about 50% singletons at 50% identity. We wrote a paper that further
+          analyzes where these gene are coming from and what they’re doing. If
+          you’re interested in learning more, we encourage you take a look at
+          the “Contact” page of this site, where you can see the abstract and
+          link to the text!
+        </p>
+      </article>
+      <figure class="cbp-so-side cbp-so-side-right">
+        <img
+          src="{{ url_for('static', filename='img/combined_clusters_50.jpg')
+          }}"
+          alt="img05"
+          style="width:100%;"
+        />
+      </figure>
+    </section>
+  </div>
+
+  <div class="container">
+    <footer>
+      <img src="{{ url_for('static', filename='img/DBMI-logo.png') }}" />
+      <img
+        src="{{ url_for('static', filename='img/Joslin-Diabetes-Center.png')
+        }}"
+        style="width: 180px; margin-left: 3rem; margin-top: .75rem;"
+      />
+    </footer>
+    <br />
+  </div>
+
+  <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/classie.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/cbpScroller.js') }}"></script>
+  <script>
+    new cbpScroller(document.getElementById("cbp-so-scroller"));
+  </script>
+</body>

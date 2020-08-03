@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-57022462-9"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-57022462-9");
+  </script>
+
+  <title>Universe of Microbial Genes</title>
+
+  <!-- Bootstrap core CSS -->
+  <link
+    rel="icon"
+    href="{{ url_for('static', filename='img/hms-logo.png') }}"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ url_for('static', filename='css/bootstrap.techie.min.css') }}"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',
+  filename='css/main.css') }}"
+  />
+</head>
+
+<body>
+  <nav
+    class="navbar navbar-default"
+    role="navigation"
+    style="margin-top:20px;
+    margin-bottom:30px;"
+  >
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle"
+        data-toggle="collapse"
+        data-target=".navbar-ex1-collapse"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <h3 style="margin-top:0; font-weight: 300">
+          The Universe of <strong>Microbial Genes</strong>
+        </h3>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">About</a></li>
+        <li><a href="/search">Find Genes</a></li>
+        <li><a href="/data">Data & Tools</a></li>
+        <li class="active"><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <br />
+      <div class="col-xs-12" style="text-align:center">
+        All data on this site is taken from the following publication:
+        <br /><strong
+          >The Landscape of Genetic Content in the Human Microbiome</strong
+        >
+        <br />Braden T. Tierney, Zhen Yang, Jacob M. Luber, Marc Beaudin, Marsha
+        C. Wibowo, Christina Baek, Eleanor Mehlenbacher, Chirag J. Patel,
+        Aleksandar D. Kostic <br /><br /><br />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-5">
+        <h4>Get in touch</h4>
+        <p>
+          Chirag J. Patel
+          <br />10 Shattuck St. <br />Boston, MA. 02115
+          <br />chirag/underscore/patel/at/hms/dot/harvard/dot/edu
+          <br />
+          <br />Aleksandar D. Kostic <br />Joslin Diabetes Center <br />One
+          Joslin Place <br />Boston, MA 02215 <br />adk/at/kosticlab/dot/org
+        </p>
+      </div>
+      <div class="col-xs-12 col-md-7">
+        <h4>Abstract</h4>
+        <p>
+          Despite substantial interest in the species diversity of the human
+          microbiome and its role in human disease, we have not quantitated the
+          scale of human microbiome genetic diversity, an instrumental task for
+          understanding human-microbe interactions. Here, to do so, we conducted
+          a cross-study meta-analysis of metagenomes from two niches, the mouth
+          and gut, amassing 3,655 samples from 13 studies. We found staggering
+          genetic heterogeneity in our dataset, identifying, at the 95% identity
+          level, a total of 45,666,334 non-redundant genes (23,961,508 in the
+          oral, 22,254,436 in the gut). We found that 50% of the genes in both
+          datasets were “singletons”, meaning they were unique to a single
+          metagenomic sample. We identified that singletons were enriched for
+          discrete functions (compared to non-singletons) and arose from
+          sub-population specific and extremely rare microbial strains. Overall,
+          these results serve as a potential explanation for the large,
+          unexplained heterogeneity observed in microbiome-derived human
+          phenotypes.
+        </p>
+        <br />
+      </div>
+    </div>
+
+    <footer>
+      <img src="{{ url_for('static', filename='img/DBMI-logo.png') }}" />
+      <img
+        src="{{ url_for('static', filename='img/Joslin-Diabetes-Center.png')
+        }}"
+        style="width: 180px; margin-left: 3rem; margin-top: .75rem;"
+      />
+    </footer>
+    <br />
+
+    <!-- Bootstrap and jquery JS -->
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  </div>
+</body>

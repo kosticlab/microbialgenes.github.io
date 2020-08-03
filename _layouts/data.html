@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-57022462-9"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-57022462-9");
+  </script>
+
+  <title>Universe of Microbial Genes</title>
+
+  <!-- Bootstrap core CSS -->
+  <link
+    rel="icon"
+    href="{{ url_for('static', filename='img/hms-logo.png') }}"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+    rel="stylesheet"
+  />
+  <link
+    href="{{ url_for('static', filename='css/bootstrap.techie.min.css') }}"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',
+    filename='css/main.css') }}"
+  />
+</head>
+
+<body>
+  <nav
+    class="navbar navbar-default"
+    role="navigation"
+    style="margin-top:20px;
+    margin-bottom:30px;"
+  >
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle"
+        data-toggle="collapse"
+        data-target=".navbar-ex1-collapse"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <h3 style="margin-top:0; font-weight: 300">
+          The Universe of <strong>Microbial Genes</strong>
+        </h3>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">About</a></li>
+        <li><a href="/search">Find Genes</a></li>
+        <li class="active"><a href="/data">Data & Tools</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <br />
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <h4>Figshare resources</h4>
+        <blockquote>
+          <p>
+            Figshare is an online open access repository where researchers can
+            preserve and share their research outputs in a citable, shareable,
+            and discoverable manner.
+          </p>
+        </blockquote>
+
+        <p>
+          For access to raw data files that we used to construct our database,
+          visit our
+          <a
+            href="https://figshare.com/account/home#/projects/62327"
+            target="_blank"
+          >
+            <strong>Genetic Landscape of the Human Microbiome</strong>
+          </a>
+          Figshare project.
+        </p>
+
+        Resources available:
+        <ul>
+          <li>
+            <a href="https://figshare.com/articles/Gene_database_diamond_index/8174813"
+            target="_blank">
+              Gene database diamond index
+            </a>
+          </li>
+          <li>
+            <a href="https://figshare.com/articles/Database_sample_study_metadata/8170826"
+            target="_blank">
+              Database sample / study metadata
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://figshare.com/articles/Merged_oral_and_gut_gene_catalog_cluster_file_95_identity_/8179250"
+              target="_blank"
+              >Merged oral and gut gene catalog cluster file, 95% identity</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://figshare.com/articles/Merged_oral_and_gut_gene_catalog/8179187"
+              target="_blank"
+              >Merged oral and gut gene catalog consensus sequence, 95%
+              identity</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://figshare.com/articles/Gut_microbiome_gene_catalog_cluster_file_50_amino_acid_identity/7999190"
+              target="_blank"
+              >Gut microbiome gene catalog cluster file, 50% amino acid
+              identity</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://figshare.com/articles/Gut_microbiome_gene_catalog_50_amino_acid_identity/7991057"
+              target="_blank"
+              >Gut microbiome gene catalog, 50% amino acid identity</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://figshare.com/articles/Gut_microbiome_gene_catalog_cluster_file_95_nucleotide_identity/7991033"
+              target="_blank"
+              >Gut microbiome gene catalog cluster file, 95% nucleotide
+              identity</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://figshare.com/articles/Gut_microbiome_gene_catalog_95_nucleotide_identity/7988621"
+              target="_blank"
+              >Gut microbiome gene catalog, 95% nucleotide identity</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://figshare.com/articles/Oral_microbiome_gene_catalog_cluster_file_95_nucleotide_identity/7985663"
+              target="_blank"
+              >Oral microbiome gene catalog cluster file, 95% nucleotide
+              identity</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://figshare.com/articles/Oral_microbiome_gene_catalog_95_nucleotide_identity/7985648"
+              target="_blank"
+              >Oral microbiome gene catalog, 95% nucleotide identity</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://figshare.com/articles/Oral_microbiome_gene_catalog_gene_cluster_file_50_amino_acid_identity/7985645"
+              target="_blank"
+              >Oral microbiome gene catalog cluster file, 50% amino acid
+              identity</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://figshare.com/articles/Oral_microbiome_gene_catalog_50_amino_acid_identity/7985636"
+              target="_blank"
+              >Oral microbiome gene catalog, 50% amino acid identity</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-xs-12 col-sm-6">
+        <h4>Summary of gene data</h4>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Gene count (total)</td>
+              <td>45,666,334</td>
+            </tr>
+            <tr>
+              <td>Gene count (oral)</td>
+              <td>23,466,696</td>
+            </tr>
+            <tr>
+              <td>Gene count (gut)</td>
+              <td>21,213,616</td>
+            </tr>
+            <tr>
+              <td>Gene count (shared)</td>
+              <td>493,011</td>
+            </tr>
+            <tr>
+              <td>Unique gene names</td>
+              <td>9,347</td>
+            </tr>
+            <tr>
+              <td>Unique ECiDs</td>
+              <td>2,148</td>
+            </tr>
+            <tr>
+              <td>Unique gene annotations</td>
+              <td>222,308</td>
+            </tr>
+            <tr>
+              <td>Unique NCBI taxon IDs</td>
+              <td>15,746</td>
+            </tr>
+            <tr>
+              <td>Mean cluster size</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Mean gene length</td>
+              <td>600</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <br />
+      <div class="col-xs-12">
+        <h4>Database column descriptions</h4>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Gene ID</td>
+              <td>
+                Unique identifier to each gene assigned during gene prediction
+              </td>
+            </tr>
+            <tr>
+              <td>Annotation</td>
+              <td>
+                Gene annotations, derived from UniProt, Pfam, TIGRFAMs, and
+                NCBI's RefSeq
+              </td>
+            </tr>
+            <tr>
+              <td>EcID</td>
+              <td>Additional gene functional annotation, if applicable</td>
+            </tr>
+            <tr>
+              <td>Gene name</td>
+              <td>
+                Annotation-associated gene name (if applicable) or designation
+                as hypothetical protein.
+              </td>
+            </tr>
+            <tr>
+              <td>NCBI taxon ID</td>
+              <td>
+                NCBI-derived taxonomic identifier for a given gene.
+                (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245000/)
+              </td>
+            </tr>
+            <tr>
+              <td>Body site</td>
+              <td>
+                Body site in which gene was found (currently oral, gut, or both,
+                which is annotation as oral | gut)
+              </td>
+            </tr>
+            <tr>
+              <td>Number of genes in cluster</td>
+              <td>
+                The total number of homologous genes in a cluster identified by
+                sequence-based clustering with CD-HIT. Currently, clusters are
+                reported in terms of 95% identity.
+              </td>
+            </tr>
+            <tr>
+              <td>Gene length</td>
+              <td>Number of nucleotides in consensus gene sequence.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <br />
+      <div class="col-xs-12">
+        <h4>Pipeline tools</h4>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Software name</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Assembly</td>
+              <td>MEGAHIT</td>
+              <td>
+                <a href="https://github.com/voutcn/megahit"
+                  >https://github.com/voutcn/megahit</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>ORF-calling and annotation</td>
+              <td>PROKKA</td>
+              <td>
+                <a href="https://github.com/tseemann/prokka"
+                  >https://github.com/tseemann/prokka</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Gene catalog construction (sequence-based clustering)</td>
+              <td>CD-HIT</td>
+              <td>
+                <a href="https://github.com/weizhongli/cdhit"
+                  >https://github.com/weizhongli/cdhit</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Taxonomic annotation</td>
+              <td>NCBI NR/taxonomy databases, Diamond</td>
+              <td>
+                <ol>
+                  <li>
+                    NCBI Non-Redundant proteins database:
+                    <a href="ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz"
+                      >ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz</a
+                    >
+                  </li>
+                  <li>
+                    NCBI taxon files:
+                    <a href="ftp://ftp.ncbi.nih.gov/pub/taxonomy/"
+                      >ftp://ftp.ncbi.nih.gov/pub/taxonomy/</a
+                    >
+                  </li>
+                  <li>
+                    Diamond:
+                    <a href="https://github.com/bbuchfink/diamond"
+                      >https://github.com/bbuchfink/diamond</a
+                    >
+                  </li>
+                </ol>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <img src="{{ url_for('static', filename='img/DBMI-logo.png') }}" />
+      <img
+        src="{{ url_for('static', filename='img/Joslin-Diabetes-Center.png')
+        }}"
+        style="width: 180px; margin-left: 3rem; margin-top: .75rem;"
+      />
+    </footer>
+    <br />
+
+    <script>
+      if (window.location.search.length === 10) {
+        alert(
+          "That file generation was taking a while! Please download the data directly here."
+        );
+        window.location.search = "";
+      } else if (window.location.search.length === 11) {
+        alert(
+          "That search was taking a while! Please download the data directly here."
+        );
+        window.location.search = "";
+      }
+    </script>
+
+    <!-- Bootstrap and jquery JS -->
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  </div>
+</body>
