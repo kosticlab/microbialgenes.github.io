@@ -11,17 +11,16 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 ```markdown
 Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+# The pan-ecological gene universe of metagenomics
 
-- Bulleted
-- List
+<p>This resource accompanies a submitted manuscript exploring the gene content of microbiomes (microbial communities) across 17 different ecologies, including humans, animals, and other environmental sources. The link below will lead you to a download page for our gene resources, and the abstract describes our findings, which notably include an unprecendent appreciation for conservation of certain genes across different environments.</p>
 
-1. Numbered
-2. List
+<p> When our work is available online, we will include a link to the manuscript here. </p>
 
-**Bold** and _Italic_ and `Code` text
+## Abstract 
+## Resource
+
+You can access our gene catalog resources (FASTA files, functional gene annotations, etc) at our <a href="https://figshare.com/projects/A_pan-ecological_metagenomic_database_reveals_over_1_800_genes_conserved_across_microbial_ecosystems/112590"> figshare resource.</a> 
 
 [Link](url) and ![Image](src)
 ```
