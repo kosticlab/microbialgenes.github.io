@@ -14,7 +14,7 @@ The human microbiome consists of microbes with pan-ecological evolutionary origi
 
 ## Database overview
 
-<img width="380" alt="Screen Shot 2021-05-06 at 10 52 02 AM" src="https://user-images.githubusercontent.com/20242238/117343416-202bdd00-ae59-11eb-96bd-282643765df9.png">
+<img width="523" alt="Screen Shot 2021-05-09 at 3 45 04 PM" src="https://user-images.githubusercontent.com/20242238/117589321-9fc9de00-b0dd-11eb-9551-ab4f28fb3563.png">
 
 Overview of database and genetic similarity between ecologies. A) Statistics regarding the gene ane sample content of our database at the 30% clustered sequence identity and the high-level analytical steps we took in the manuscript. B) Hierarchical clustering on the gene overlap between ecologies as a function of iterative sampling. Each cell represents the average number of genes shared between two ecologies (on rows and columns) after 50 random samplings. Cell color is in units of number of genes. Color of text corresponds to broader ecology class. C) The average number of genes shared between any two ecologies. This number is the sum of the rows, not counting the diagonal. D) The average number of genes unique to (found only in) a given ecology. This number corresponds to the values in the diagonal.
 
